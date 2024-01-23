@@ -1,0 +1,25 @@
+it is a binary-to-text encoding scheme that follows a specific set of rules. The rules of Base64 encoding define how binary data is represented using a set of 64 ASCII characters (hence the name "Base64").
+
+Here are the key steps in the Base64 encoding process:
+
+Binary Data:
+
+The input binary data is divided into 6-bit chunks.
+ASCII Representation:
+
+Each 6-bit chunk is then represented as a single ASCII character. The encoding uses a set of 64 characters, typically the following: A-Z, a-z, 0-9, '+', and '/'. This set of characters provides 64 possible values for each 6-bit chunk.
+Padding (if needed):
+
+If the length of the input binary data is not a multiple of 3, padding is added to make it a multiple of 3. Padding is done with the '=' character.
+For example, consider the ASCII characters 'A', 'B', and 'C' represented in binary:
+
+'A' in binary is 01000001.
+'B' in binary is 01000010.
+'C' in binary is 01000011.
+When combined, these three characters form the 24-bit sequence: 010000010100001001000011.
+
+Now, split this 24-bit sequence into four 6-bit chunks: 010000, 010100, 001001, 000011.
+
+Convert each 6-bit chunk to its corresponding Base64 character: 'Q', 'U', 'J', 'F'.
+
+So, the Base64 encoding of 'ABC' is 'QUJD'.
