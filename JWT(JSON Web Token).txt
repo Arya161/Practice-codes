@@ -18,3 +18,7 @@ a) The server sends the JWT back to the client.
 a) The client includes the JWT in the Authorization header.
 b) The server verifies the JWT's signature using the secret key.
 c) If the signature is valid, the server extracts the claims from the JWT and uses them to authenticate and authorize the client.
+
+
+Usage in Node.JS
+Installation - $npm install jsonwebtoken
