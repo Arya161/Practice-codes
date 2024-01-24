@@ -1,0 +1,21 @@
+JWT (JSON Web Token) is a compact, URL-safe means of representing claims to be transferred between two parties. It is often used for authentication and authorization purposes in web development. The typical flow involves a client (such as a web browser or mobile app) sending credentials to a server, which then issues a JWT upon successful authentication. The client can include this JWT in subsequent requests to access protected resources.
+
+Here's a basic overview of how JWT authentication works:
+
+User Authentication:
+
+The user provides their credentials (e.g., username and password) to the server.
+The server validates the credentials, and if they are correct, it generates a JWT.
+JWT Generation:
+
+The server creates a JSON object containing a set of claims.
+The claims typically include information about the user (subject, username, user role, etc.) and metadata.
+The server signs the JSON object with a secret key to create the JWT.
+JWT Issuance:
+
+The server sends the JWT back to the client.
+Client Usage:
+
+The client includes the JWT in the Authorization header of subsequent requests to protected resources.
+The server verifies the JWT's signature using the secret key.
+If the signature is valid, the server extracts the claims from the JWT and uses them to authenticate and authorize the client.
